@@ -25,10 +25,20 @@ function Main() {
 
         </div>
 
-        <div>
-            {data.map((events)=> {
-                
-            })}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {data.map((events)=> 
+            
+            <div className="max-w-xs rounded overflow-hidden shadow-lg">
+            <img className="w-full" src={events.eventThumbnail} alt={events.title} />
+            <div className="px-6 py-4">
+
+            <p>Date: {events.eventStartTime}</p>
+              <h2 className="font-bold text-xl mb-2">{events.title}</h2>
+              
+              </div>
+              
+          </div>
+            )}
         </div>
 
         
